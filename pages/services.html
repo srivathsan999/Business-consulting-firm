@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Our Services - Business Consulting | ConsultPro</title>
+    <meta name="description" content="Comprehensive business consulting services including strategic planning, financial advisory, operations optimization, and more.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="home-1.html">
+                <img src="../assets/images/favicon.svg" alt="ConsultPro" height="40" width="40" class="me-2">
+                ConsultPro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="home-1.html">Home – General Services</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home – Niche / SaaS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="login.html" class="navbar-btn btn-login me-2">Login</a>
+                    <a href="register.html" class="navbar-btn btn-login me-3">Register</a>
+                    <a href="contact.html" class="btn btn-primary me-3">Get Consultation</a>
+                    <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <section class="hero bg-secondary" style="padding: 4rem 0;">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Our Services</h1>
+            <p class="lead">Comprehensive consulting solutions tailored to your business needs</p>
+        </div>
+    </section>
+    
+    <!-- Services Section with Filters -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter and View Toggle -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h5>Filter by Category:</h5>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <button class="btn btn-outline category-filter active" data-category="all">All</button>
+                        <button class="btn btn-outline category-filter" data-category="strategy">Strategy</button>
+                        <button class="btn btn-outline category-filter" data-category="finance">Finance</button>
+                        <button class="btn btn-outline category-filter" data-category="operations">Operations</button>
+                        <button class="btn btn-outline category-filter" data-category="technology">Technology</button>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>View:</h5>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline view-toggle-btn active" id="gridView" aria-label="Grid view">
+                            <i class="bi bi-grid-3x3-gap"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline view-toggle-btn" id="listView" aria-label="List view">
+                            <i class="bi bi-list-ul"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services Container -->
+            <div class="services-container grid-view" id="servicesContainer">
+                <!-- Service 1 -->
+                <div class="service-item grid-item card" data-category="strategy">
+                    <div class="card-body">
+                        <div class="service-icon mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <h5 class="card-title">Strategic Planning</h5>
+                        <p class="card-text">Develop comprehensive strategies to achieve your business goals and overcome challenges.</p>
+                        <ul class="list-unstyled small text-muted mb-3">
+                            <li><i class="bi bi-check text-success"></i> Market analysis</li>
+                            <li><i class="bi bi-check text-success"></i> Competitive positioning</li>
+                            <li><i class="bi bi-check text-success"></i> Growth strategies</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-item grid-item card" data-category="finance">
+                    <div class="card-body">
+                        <div class="service-icon mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h5 class="card-title">Financial Advisory</h5>
+                        <p class="card-text">Expert financial analysis and recommendations to optimize your company's financial performance.</p>
+                        <ul class="list-unstyled small text-muted mb-3">
+                            <li><i class="bi bi-check text-success"></i> Financial analysis</li>
+                            <li><i class="bi bi-check text-success"></i> Budget planning</li>
+                            <li><i class="bi bi-check text-success"></i> Investment advice</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-item grid-item card" data-category="operations">
+                    <div class="card-body">
+                        <div class="service-icon mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                        <h5 class="card-title">Operations Optimization</h5>
+                        <p class="card-text">Streamline processes and improve operational efficiency to reduce costs and increase productivity.</p>
+                        <ul class="list-unstyled small text-muted mb-3">
+                            <li><i class="bi bi-check text-success"></i> Process improvement</li>
+                            <li><i class="bi bi-check text-success"></i> Cost reduction</li>
+                            <li><i class="bi bi-check text-success"></i> Efficiency audits</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-item grid-item card" data-category="operations">
+                    <div class="card-body">
+                        <div class="service-icon mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h5 class="card-title">Organizational Development</h5>
+                        <p class="card-text">Build high-performing teams and optimize your organizational structure for maximum efficiency.</p>
+                        <ul class="list-unstyled small text-muted mb-3">
+                            <li><i class="bi bi-check text-success"></i> Team building</li>
+                            <li><i class="bi bi-check text-success"></i> Leadership development</li>
+                            <li><i class="bi bi-check text-success"></i> Culture transformation</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-item grid-item card" data-category="strategy">
+                    <div class="card-body">
+                        <div class="service-icon mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="card-title">Risk Management</h5>
+                        <p class="card-text">Identify and mitigate risks to protect your business and ensure long-term stability.</p>
+                        <ul class="list-unstyled small text-muted mb-3">
+                            <li><i class="bi bi-check text-success"></i> Risk assessment</li>
+                            <li><i class="bi bi-check text-success"></i> Compliance review</li>
+                            <li><i class="bi bi-check text-success"></i> Crisis management</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-item grid-item card" data-category="technology">
+                    <div class="card-body">
+                        <div class="service-icon mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                            <i class="bi bi-rocket"></i>
+                        </div>
+                        <h5 class="card-title">Digital Transformation</h5>
+                        <p class="card-text">Leverage technology to transform your business processes and gain competitive advantages.</p>
+                        <ul class="list-unstyled small text-muted mb-3">
+                            <li><i class="bi bi-check text-success"></i> Digital strategy</li>
+                            <li><i class="bi bi-check text-success"></i> Technology integration</li>
+                            <li><i class="bi bi-check text-success"></i> Automation solutions</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-item grid-item card" data-category="strategy">
+                    <div class="card-body">
+                        <div class="service-icon mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                            <i class="bi bi-megaphone"></i>
+                        </div>
+                        <h5 class="card-title">Marketing & Branding</h5>
+                        <p class="card-text">Develop powerful marketing strategies and build a strong brand presence in your market.</p>
+                        <ul class="list-unstyled small text-muted mb-3">
+                            <li><i class="bi bi-check text-success"></i> Brand strategy</li>
+                            <li><i class="bi bi-check text-success"></i> Market positioning</li>
+                            <li><i class="bi bi-check text-success"></i> Marketing campaigns</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="service-item grid-item card" data-category="operations">
+                    <div class="card-body">
+                        <div class="service-icon mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <h5 class="card-title">Change Management</h5>
+                        <p class="card-text">Navigate organizational changes smoothly and ensure successful implementation of new initiatives.</p>
+                        <ul class="list-unstyled small text-muted mb-3">
+                            <li><i class="bi bi-check text-success"></i> Change strategy</li>
+                            <li><i class="bi bi-check text-success"></i> Stakeholder engagement</li>
+                            <li><i class="bi bi-check text-success"></i> Transition planning</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <img src="../assets/images/favicon.svg" alt="ConsultPro" height="32" width="32">
+                        <h5 class="mb-0">ConsultPro</h5>
+                    </div>
+                    <p>Transforming businesses through expert consulting and strategic guidance.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="service-details.html">Strategic Planning</a></li>
+                        <li><a href="service-details.html">Financial Advisory</a></li>
+                        <li><a href="service-details.html">Operations Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt"></i> 123 Business St, City, Country</li>
+                        <li><i class="bi bi-telephone"></i> +1 (555) 123-4567</li>
+                        <li><i class="bi bi-envelope"></i> info@consultpro.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: var(--border-color);">
+            <div class="row">
+                <div class="col-md-6"><p class="mb-0">&copy; 2024 ConsultPro. All rights reserved.</p></div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/services.js"></script>
+</body>
+</html>
+

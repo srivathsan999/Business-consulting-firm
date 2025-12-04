@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Business Consulting Firm - Expert Consulting Services | Home</title>
+    <meta name="description" content="Professional business consulting services to help your company grow. Expert advice on strategy, operations, finance, and more.">
+    <meta name="keywords" content="business consulting, strategy consulting, management consulting, corporate advisory">
+    <meta name="author" content="Business Consulting Firm">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:title" content="Business Consulting Firm - Expert Consulting Services">
+    <meta property="og:description" content="Professional business consulting services to help your company grow.">
+    <meta property="og:image" content="https://example.com/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://example.com/">
+    <meta property="twitter:title" content="Business Consulting Firm - Expert Consulting Services">
+    <meta property="twitter:description" content="Professional business consulting services to help your company grow.">
+    <meta property="twitter:image" content="https://example.com/assets/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="assets/images/favicon.svg" alt="ConsultPro" height="40" width="40" class="me-2">
+                ConsultPro
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <!-- Home Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item active" href="index.html">Home – General Services</a></li>
+                            <li><a class="dropdown-item" href="pages/home-2.html">Home – Niche / SaaS</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/about.html">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/services.html">Services</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/blog.html">Blog</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/pricing.html">Pricing</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Right Side Actions -->
+                <div class="d-flex align-items-center">
+                    <!-- Login/Register -->
+                    <a href="pages/login.html" class="navbar-btn btn-login me-2">Login</a>
+                    <a href="pages/register.html" class="navbar-btn btn-login me-3">Register</a>
+                    
+                    <!-- CTA Button -->
+                    <a href="pages/contact.html" class="btn btn-primary me-3">Get Consultation</a>
+                    
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-4 fw-bold mb-4">Transform Your Business with Expert Consulting</h1>
+                    <p class="lead mb-4">We provide strategic guidance and actionable insights to help your business achieve sustainable growth and competitive advantage.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="pages/contact.html" class="btn btn-primary btn-lg">Get Started Today</a>
+                        <a href="pages/services.html" class="btn btn-outline btn-lg">Our Services</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <div class="hero-image" style="max-width: 100%; height: 400px; background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop'); background-size: cover; background-position: center; border-radius: 1rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Grid Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p class="section-subtitle">Comprehensive consulting solutions tailored to your business needs</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-lightbulb"></i>
+                            </div>
+                            <h5 class="card-title">Strategic Planning</h5>
+                            <p class="card-text">Develop comprehensive strategies to achieve your business goals and overcome challenges.</p>
+                            <a href="pages/service-details.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <h5 class="card-title">Financial Advisory</h5>
+                            <p class="card-text">Expert financial analysis and recommendations to optimize your company's financial performance.</p>
+                            <a href="pages/service-details.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h5 class="card-title">Organizational Development</h5>
+                            <p class="card-text">Build high-performing teams and optimize your organizational structure for maximum efficiency.</p>
+                            <a href="pages/service-details.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-gear"></i>
+                            </div>
+                            <h5 class="card-title">Operations Optimization</h5>
+                            <p class="card-text">Streamline processes and improve operational efficiency to reduce costs and increase productivity.</p>
+                            <a href="pages/service-details.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h5 class="card-title">Risk Management</h5>
+                            <p class="card-text">Identify and mitigate risks to protect your business and ensure long-term stability.</p>
+                            <a href="pages/service-details.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+                            <h5 class="card-title">Digital Transformation</h5>
+                            <p class="card-text">Leverage technology to transform your business processes and gain competitive advantages.</p>
+                            <a href="pages/service-details.html" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p class="section-subtitle">Experience, expertise, and results-driven approach</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <h4 class="card-title">15+ Years Experience</h4>
+                            <p class="card-text">Over a decade of helping businesses achieve their goals</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-person-check"></i>
+                            </div>
+                            <h4 class="card-title">Expert Team</h4>
+                            <p class="card-text">Certified consultants with diverse industry expertise</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h4 class="card-title">Proven Results</h4>
+                            <p class="card-text">Track record of delivering measurable business outcomes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3" style="font-size: 3rem; color: var(--primary-color);">
+                                <i class="bi bi-headset"></i>
+                            </div>
+                            <h4 class="card-title">24/7 Support</h4>
+                            <p class="card-text">Dedicated support whenever you need it</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Carousel -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p class="section-subtitle">Trusted by businesses worldwide</p>
+            </div>
+            
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="card text-center p-5">
+                                    <div class="mb-3" style="font-size: 2rem; color: var(--primary-color);">
+                                        <i class="bi bi-quote"></i>
+                                    </div>
+                                    <p class="lead mb-4">"ConsultPro transformed our business strategy and helped us achieve 300% growth in just two years. Their expertise is unmatched."</p>
+                                    <div class="d-flex align-items-center justify-content-center gap-3">
+                                        <img src="https://i.pravatar.cc/100?img=47" alt="Sarah Johnson" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover; border: 2px solid var(--primary-color);">
+                                        <div class="text-start">
+                                            <h6 class="mb-0">Sarah Johnson</h6>
+                                            <small class="text-muted">CEO, TechCorp Inc.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="card text-center p-5">
+                                    <div class="mb-3" style="font-size: 2rem; color: var(--primary-color);">
+                                        <i class="bi bi-quote"></i>
+                                    </div>
+                                    <p class="lead mb-4">"The financial advisory services provided exceptional insights that saved us millions. Highly recommended!"</p>
+                                    <div class="d-flex align-items-center justify-content-center gap-3">
+                                        <img src="https://i.pravatar.cc/100?img=13" alt="Michael Chen" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover; border: 2px solid var(--primary-color);">
+                                        <div class="text-start">
+                                            <h6 class="mb-0">Michael Chen</h6>
+                                            <small class="text-muted">CFO, Global Industries</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="card text-center p-5">
+                                    <div class="mb-3" style="font-size: 2rem; color: var(--primary-color);">
+                                        <i class="bi bi-quote"></i>
+                                    </div>
+                                    <p class="lead mb-4">"Their operational optimization strategies streamlined our processes and increased productivity by 45%. Outstanding work!"</p>
+                                    <div class="d-flex align-items-center justify-content-center gap-3">
+                                        <img src="https://i.pravatar.cc/100?img=20" alt="Emily Rodriguez" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover; border: 2px solid var(--primary-color);">
+                                        <div class="text-start">
+                                            <h6 class="mb-0">Emily Rodriguez</h6>
+                                            <small class="text-muted">Operations Director, Manufacturing Plus</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Brands/Clients Section -->
+    <section class="section bg-secondary">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted By Industry Leaders</h2>
+            </div>
+            
+            <div class="row align-items-center g-4">
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="brand-logo" title="TechCorp">
+                        <div class="brand-icon">
+                            <i class="bi bi-cpu-fill"></i>
+                        </div>
+                        <div class="brand-name">TechCorp</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="brand-logo" title="Global Inc">
+                        <div class="brand-icon">
+                            <i class="bi bi-globe2"></i>
+                        </div>
+                        <div class="brand-name">Global Inc</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="brand-logo" title="Manufacture Plus">
+                        <div class="brand-icon">
+                            <i class="bi bi-gear-wide-connected"></i>
+                        </div>
+                        <div class="brand-name">Manufacture Plus</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="brand-logo" title="Finance Group">
+                        <div class="brand-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <div class="brand-name">Finance Group</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="brand-logo" title="Digital Solutions">
+                        <div class="brand-icon">
+                            <i class="bi bi-cloud-arrow-up-fill"></i>
+                        </div>
+                        <div class="brand-name">Digital Solutions</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <div class="brand-logo" title="Enterprise Ltd">
+                        <div class="brand-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <div class="brand-name">Enterprise Ltd</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Preview Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Insights</h2>
+                <p class="section-subtitle">Stay updated with industry trends and best practices</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop" alt="Strategic Planning" style="height: 200px; object-fit: cover; border-radius: 0.5rem 0.5rem 0 0;">
+                        <div class="card-body">
+                            <small class="text-muted">Strategy • Dec 15, 2024</small>
+                            <h5 class="card-title mt-2">10 Strategic Planning Mistakes to Avoid</h5>
+                            <p class="card-text">Learn about common pitfalls in strategic planning and how to avoid them for better business outcomes.</p>
+                            <a href="pages/blog-details.html" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="Financial Planning" style="height: 200px; object-fit: cover; border-radius: 0.5rem 0.5rem 0 0;">
+                        <div class="card-body">
+                            <small class="text-muted">Finance • Dec 10, 2024</small>
+                            <h5 class="card-title mt-2">Financial Planning for Growing Businesses</h5>
+                            <p class="card-text">Essential financial planning strategies to support sustainable growth and manage cash flow effectively.</p>
+                            <a href="pages/blog-details.html" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop" alt="Digital Operations" style="height: 200px; object-fit: cover; border-radius: 0.5rem 0.5rem 0 0;">
+                        <div class="card-body">
+                            <small class="text-muted">Operations • Dec 5, 2024</small>
+                            <h5 class="card-title mt-2">Optimizing Operations in the Digital Age</h5>
+                            <p class="card-text">How technology and process improvements can transform your operations and boost efficiency.</p>
+                            <a href="pages/blog-details.html" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="pages/blog.html" class="btn btn-primary btn-lg">View All Posts</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lead Capture Form -->
+    <section class="section bg-secondary">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card p-5">
+                        <div class="text-center mb-4">
+                            <h2>Get Your Free Consultation</h2>
+                            <p class="text-muted">Fill out the form below and our team will contact you within 24 hours</p>
+                        </div>
+                        
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">Please provide your first name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="invalid-feedback">Please provide your last name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="company" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="message" class="form-label">How can we help?</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                    <div class="invalid-feedback">Please tell us how we can help.</div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">Request Consultation</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 0; border-top: none;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <img src="assets/images/favicon.svg" alt="ConsultPro" height="32" width="32">
+                        <h5 class="mb-0">ConsultPro</h5>
+                    </div>
+                    <p>Transforming businesses through expert consulting and strategic guidance.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/services.html">Our Services</a></li>
+                        <li><a href="pages/pricing.html">Pricing</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="pages/service-details.html">Strategic Planning</a></li>
+                        <li><a href="pages/service-details.html">Financial Advisory</a></li>
+                        <li><a href="pages/service-details.html">Operations Optimization</a></li>
+                        <li><a href="pages/service-details.html">Risk Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt"></i> 123 Business St, City, Country</li>
+                        <li><i class="bi bi-telephone"></i> +1 (555) 123-4567</li>
+                        <li><i class="bi bi-envelope"></i> info@consultpro.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4" style="border-color: var(--border-color);">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 ConsultPro. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
