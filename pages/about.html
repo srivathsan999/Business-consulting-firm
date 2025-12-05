@@ -14,6 +14,149 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* Team member card alignment */
+        .team-member-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .team-member-card .card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .team-member-card .card-body p.small {
+            flex-grow: 1;
+        }
+        
+        /* Social icons alignment */
+        .team-member-card .d-flex.justify-content-center {
+            margin-top: auto !important;
+            padding-top: 1rem;
+            align-items: center;
+        }
+        
+        .team-member-card .d-flex.justify-content-center a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+        
+        .team-member-card .d-flex.justify-content-center a:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Mission & Vision headings alignment */
+        .section .row.g-5.align-items-start .col-lg-6 h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        /* Our Journey section mobile alignment */
+        .timeline .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        .timeline .card {
+            height: 100%;
+        }
+        
+        /* Center align timeline card content */
+        .timeline .card-body {
+            text-align: center;
+        }
+        
+        .timeline .card-body .badge {
+            display: inline-block;
+        }
+        
+        @media (max-width: 767px) {
+            .timeline {
+                padding: 0;
+            }
+            
+            .timeline .row.mb-5 {
+                margin-bottom: 2rem !important;
+            }
+            
+            .timeline .row:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            .timeline .col-md-6 {
+                margin-bottom: 1.5rem;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            
+            .timeline .col-md-6:last-child {
+                margin-bottom: 0;
+            }
+            
+            .timeline .card {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .timeline .col-md-6.mx-auto {
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .timeline .col-lg-10 {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+        }
+        
+        /* Our Vision section text visibility fix */
+        .col-lg-6 h2,
+        .col-lg-6 p,
+        .col-lg-6 .lead {
+            color: var(--text-primary) !important;
+        }
+        
+        .col-lg-6 .bg-secondary {
+            background-color: var(--bg-secondary) !important;
+        }
+        
+        .col-lg-6 .bg-secondary h5,
+        .col-lg-6 .bg-secondary strong,
+        .col-lg-6 .bg-secondary p {
+            color: var(--text-primary) !important;
+        }
+        
+        .col-lg-6 .bg-secondary .text-muted {
+            color: var(--text-secondary) !important;
+        }
+        
+        /* Ensure text is visible in light theme */
+        [data-theme="light"] .col-lg-6 h2,
+        [data-theme="light"] .col-lg-6 p,
+        [data-theme="light"] .col-lg-6 .lead,
+        [data-theme="light"] .col-lg-6 .bg-secondary h5,
+        [data-theme="light"] .col-lg-6 .bg-secondary strong,
+        [data-theme="light"] .col-lg-6 .bg-secondary p {
+            color: #212529 !important;
+        }
+        
+        [data-theme="light"] .col-lg-6 .bg-secondary .text-muted {
+            color: #6c757d !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -62,7 +205,7 @@
     <!-- Mission & Vision -->
     <section class="section">
         <div class="container">
-            <div class="row g-5 align-items-center">
+            <div class="row g-5 align-items-start">
                 <div class="col-lg-6">
                     <h2>Our Mission</h2>
                     <p class="lead">To empower businesses worldwide with strategic insights and actionable solutions that drive sustainable growth and competitive advantage.</p>
@@ -201,7 +344,7 @@
                             <h5>Michael Chen</h5>
                             <p class="text-muted small mb-2">CFO</p>
                             <p class="small">Financial strategy expert with 15+ years in corporate finance.</p>
-                            <div class="d-flex justify-content-center gap-2" style="margin-top: 2.5rem;">
+                            <div class="d-flex justify-content-center gap-2 mt-3">
                                 <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                                 <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
                             </div>
@@ -307,10 +450,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <img src="../assets/images/favicon.svg" alt="ConsultPro" height="32" width="32">
-                        <h5 class="mb-0">ConsultPro</h5>
-                    </div>
+                    <h5 class="d-inline-flex align-items-center gap-2 mb-0" style="margin-bottom: var(--spacing-md) !important;">
+                        <img src="../assets/images/favicon.svg" alt="ConsultPro" height="24" width="24">
+                        ConsultPro
+                    </h5>
                     <p>Transforming businesses through expert consulting and strategic guidance.</p>
                     <div class="d-flex gap-3 mt-3">
                         <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -348,7 +491,7 @@
             </div>
             <hr class="my-4" style="border-color: var(--border-color);">
             <div class="row">
-                <div class="col-md-6"><p class="mb-0">&copy; 2024 ConsultPro. All rights reserved.</p></div>
+                <div class="col-md-6"><p class="mb-0">&copy; 2025 ConsultPro. All rights reserved.</p></div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-muted me-3">Privacy Policy</a>
                     <a href="#" class="text-muted">Terms of Service</a>

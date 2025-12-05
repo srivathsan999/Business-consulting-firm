@@ -14,6 +14,239 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* Enhanced horizontal scroll for comparison table on mobile */
+        .compare-table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+        }
+        
+        @media (max-width: 992px) {
+            .compare-table-wrapper {
+                display: block;
+                white-space: nowrap;
+            }
+            
+            .compare-table-wrapper table {
+                width: 100%;
+                min-width: 720px;
+            }
+            
+            .compare-table-wrapper th,
+            .compare-table-wrapper td {
+                white-space: nowrap;
+                padding: 0.75rem 0.6rem;
+            }
+        }
+        
+        /* Pricing Toggle Switch Design */
+        .pricing-toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .pricing-toggle-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .pricing-toggle-label.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .pricing-toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 32px;
+            background-color: var(--bg-tertiary);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid var(--border-color);
+        }
+        
+        .pricing-toggle-switch.active {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .pricing-toggle-slider {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pricing-toggle-switch.active .pricing-toggle-slider {
+            transform: translateX(28px);
+        }
+        
+        .pricing-savings-badge {
+            display: inline-block;
+            margin-left: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            background-color: #28a745;
+            color: white;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .pricing-savings-badge.hidden {
+            display: none;
+        }
+        
+        /* Pricing card price alignment - keep on single line */
+        .pricing-card .card-body {
+            padding: 1.5rem;
+        }
+        
+        .pricing-card h5 {
+            white-space: nowrap;
+            text-align: center;
+        }
+        
+        .pricing-card h2 {
+            white-space: nowrap;
+            text-align: center;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .pricing-card .price-monthly,
+        .pricing-card .price-yearly {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .pricing-card .price-monthly h2,
+        .pricing-card .price-yearly h2 {
+            white-space: nowrap;
+            text-align: center;
+            width: 100%;
+            overflow: visible;
+        }
+        
+        .pricing-card h2 span {
+            white-space: nowrap;
+            display: inline;
+        }
+        
+        /* Pricing cards container - prevent overflow */
+        .pricing-card {
+            min-width: 0;
+            max-width: 100%;
+            width: 100%;
+        }
+        
+        .pricing-card .card-body {
+            min-width: 0;
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Ensure row and columns don't overflow */
+        .section .row.g-4 {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        .section .row.g-4 > [class*="col-"] {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            min-width: 0;
+        }
+        
+        /* Responsive font sizes to ensure text fits fully on one line */
+        /* iPad Pro and tablet landscape (1024px - 1199px) */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .pricing-card .card-body {
+                padding: 1.25rem;
+            }
+            
+            .pricing-card h2 {
+                font-size: 1.65rem;
+            }
+            
+            .pricing-card h5 {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .pricing-card h2 {
+                font-size: 1.75rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-card .card-body {
+                padding: 1.25rem;
+            }
+            
+            .pricing-card h2 {
+                font-size: 1.5rem;
+            }
+            
+            .pricing-card h5 {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .pricing-card .card-body {
+                padding: 1rem;
+            }
+            
+            .pricing-card h2 {
+                font-size: 1.35rem;
+            }
+            
+            .pricing-card h5 {
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .pricing-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .pricing-card .card-body {
+                padding: 0.875rem;
+            }
+            
+            .pricing-card h2 {
+                font-size: 1.1rem;
+            }
+            
+            .pricing-card h5 {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .pricing-card h2 {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -54,17 +287,19 @@
     <!-- Page Header -->
     <section class="hero bg-secondary" style="padding: 4rem 0;">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-3">Simple, Transparent Pricing</h1>
-            <p class="lead">Choose the plan that best fits your business needs</p>
+            <h1 class="display-4 fw-bold mb-3">Choose Your Plan</h1>
+            <p class="lead mb-4">Flexible pricing options designed to scale with your business</p>
             
-            <!-- Monthly/Yearly Toggle -->
-            <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
-                <span>Monthly</span>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline active" id="monthlyToggle">Monthly</button>
-                    <button type="button" class="btn btn-outline" id="yearlyToggle">Yearly</button>
+            <!-- Billing Period Toggle -->
+            <div class="pricing-toggle-container">
+                <span class="pricing-toggle-label active" id="monthlyLabel">Monthly</span>
+                <div class="pricing-toggle-switch active" id="pricingToggle">
+                    <div class="pricing-toggle-slider"></div>
                 </div>
-                <span>Yearly <span class="badge bg-success savings-badge" style="display: none;">Save 20%</span></span>
+                <span class="pricing-toggle-label" id="yearlyLabel">
+                    Yearly
+                    <span class="pricing-savings-badge hidden" id="savingsBadge">Save 20%</span>
+                </span>
             </div>
         </div>
     </section>
@@ -171,7 +406,7 @@
             <div class="section-title">
                 <h2>Compare Plans</h2>
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive compare-table-wrapper" role="region" aria-label="Compare Plans Table">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -222,10 +457,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <img src="../assets/images/favicon.svg" alt="ConsultPro" height="32" width="32">
-                        <h5 class="mb-0">ConsultPro</h5>
-                    </div>
+                    <h5 class="d-inline-flex align-items-center gap-2 mb-0" style="margin-bottom: var(--spacing-md) !important;">
+                        <img src="../assets/images/favicon.svg" alt="ConsultPro" height="24" width="24">
+                        ConsultPro
+                    </h5>
                     <p>Transforming businesses through expert consulting and strategic guidance.</p>
                     <div class="d-flex gap-3 mt-3">
                         <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -263,7 +498,7 @@
             </div>
             <hr class="my-4" style="border-color: var(--border-color);">
             <div class="row">
-                <div class="col-md-6"><p class="mb-0">&copy; 2024 ConsultPro. All rights reserved.</p></div>
+                <div class="col-md-6"><p class="mb-0">&copy; 2025 ConsultPro. All rights reserved.</p></div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-muted me-3">Privacy Policy</a>
                     <a href="#" class="text-muted">Terms of Service</a>

@@ -47,11 +47,17 @@
             box-shadow: none;
             margin: 0;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .auth-header .container {
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
         }
         .auth-logo {
             display: flex;
@@ -106,6 +112,9 @@
             text-align: center;
             margin-bottom: 2rem;
         }
+        .login-header h2 {
+            white-space: nowrap;
+        }
         .divider {
             text-align: center;
             margin: 1.5rem 0;
@@ -151,41 +160,54 @@
             color: var(--primary-color);
         }
         
-        /* Password input + eye icon button height alignment fix */
+        /* Password input + eye icon button styling */
         .input-group {
-            --password-input-padding-y: 0.75rem;
-            --password-input-padding-x: 1rem;
-            --password-input-line-height: 1.5;
-            --password-input-font-size: 1rem;
-            --password-input-border-width: 1px;
-            --password-height: calc(var(--password-input-line-height) * var(--password-input-font-size) + (var(--password-input-padding-y) * 2) + (var(--password-input-border-width) * 2));
+            position: relative;
+            width: 100%;
+            display: flex;
             align-items: stretch;
         }
         
         .input-group .form-control {
-            padding: var(--password-input-padding-y) var(--password-input-padding-x);
-            line-height: var(--password-input-line-height);
-            font-size: var(--password-input-font-size);
-            height: var(--password-height);
-            box-sizing: border-box;
+            padding-right: 3rem;
+            width: 100%;
         }
         
         .input-group .btn-outline-secondary {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: auto;
+            border: none;
+            background: transparent;
             padding: 0 0.75rem;
-            height: var(--password-height);
-            min-height: var(--password-height);
-            max-height: var(--password-height);
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 10;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            margin: 0;
             line-height: 1;
-            font-size: var(--password-input-font-size);
-            box-sizing: border-box;
-            flex-shrink: 0;
+        }
+        
+        .input-group .btn-outline-secondary:hover {
+            background: transparent;
+            color: var(--primary-color);
+        }
+        
+        .input-group .btn-outline-secondary:focus {
+            box-shadow: none;
+            outline: none;
         }
         
         .input-group .btn-outline-secondary i {
-            font-size: var(--password-input-font-size);
+            font-size: 1.1rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>

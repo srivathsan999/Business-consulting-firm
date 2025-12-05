@@ -155,6 +155,50 @@ a:hover {
   transition: var(--transition);
 }
 
+/* Keep navbar links on a single line and prevent wrapping */
+.navbar-nav {
+  flex-wrap: nowrap;
+}
+
+.navbar-nav .nav-link {
+  white-space: nowrap;
+}
+
+/* Keep right-side actions aligned on one line */
+.navbar .d-flex.align-items-center {
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+/* Smaller navbar primary CTA */
+.navbar .btn.btn-primary {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+/* Prevent CTA from enlarging on mobile */
+@media (max-width: 991.98px) {
+  .navbar .btn.btn-primary {
+    padding: 0.4rem 0.9rem !important;
+    font-size: 0.95rem !important;
+    width: auto;
+  }
+
+  /* Allow wrapping on smaller viewports to avoid horizontal overflow */
+  .navbar-nav {
+    flex-wrap: wrap;
+  }
+
+  .navbar-nav .nav-link {
+    white-space: normal;
+  }
+
+  .navbar .d-flex.align-items-center {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
 /* Override Bootstrap navbar-light and bg-light for dark mode */
 .navbar-light,
 .navbar.bg-light {
@@ -252,6 +296,18 @@ a:hover {
 .navbar-nav .nav-link:not(.dropdown-toggle):hover::after,
 .navbar-nav .nav-link:not(.dropdown-toggle).active::after {
   width: 80%;
+}
+
+/* Hide underline on mobile and tablet views */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link:not(.dropdown-toggle)::after {
+    display: none;
+  }
+  
+  .navbar-nav .nav-link:not(.dropdown-toggle):hover::after,
+  .navbar-nav .nav-link:not(.dropdown-toggle).active::after {
+    display: none;
+  }
 }
 
 

@@ -11,35 +11,78 @@
   });
 
   function initPricingToggle() {
-    const monthlyBtn = document.getElementById('monthlyToggle');
-    const yearlyBtn = document.getElementById('yearlyToggle');
+    const toggleSwitch = document.getElementById('pricingToggle');
+    const monthlyLabel = document.getElementById('monthlyLabel');
+    const yearlyLabel = document.getElementById('yearlyLabel');
+    const savingsBadge = document.getElementById('savingsBadge');
     const monthlyPrices = document.querySelectorAll('.price-monthly');
     const yearlyPrices = document.querySelectorAll('.price-yearly');
-    const savingsBadges = document.querySelectorAll('.savings-badge');
 
-    if (!monthlyBtn || !yearlyBtn) return;
+    if (!toggleSwitch) return;
 
-    // Set default to monthly
-    setPricingPeriod('monthly');
+    let isMonthly = true;
 
-    monthlyBtn.addEventListener('click', () => setPricingPeriod('monthly'));
-    yearlyBtn.addEventListener('click', () => setPricingPeriod('yearly'));
+    // Toggle switch click handler
+    toggleSwitch.addEventListener('click', function() {
+      isMonthly = !isMonthly;
+      setPricingPeriod(isMonthly ? 'monthly' : 'yearly');
+    });
+
+    // Label click handlers
+    if (monthlyLabel) {
+      monthlyLabel.addEventListener('click', function() {
+        if (!isMonthly) {
+          isMonthly = true;
+          setPricingPeriod('monthly');
+        }
+      });
+    }
+
+    if (yearlyLabel) {
+      yearlyLabel.addEventListener('click', function() {
+        if (isMonthly) {
+          isMonthly = false;
+          setPricingPeriod('yearly');
+        }
+      });
+    }
 
     function setPricingPeriod(period) {
       if (period === 'monthly') {
-        monthlyBtn.classList.add('active');
-        yearlyBtn.classList.remove('active');
+        // Update toggle switch
+        toggleSwitch.classList.add('active');
+        isMonthly = true;
+        
+        // Update labels
+        if (monthlyLabel) monthlyLabel.classList.add('active');
+        if (yearlyLabel) yearlyLabel.classList.remove('active');
+        
+        // Update prices
         monthlyPrices.forEach(price => price.style.display = '');
         yearlyPrices.forEach(price => price.style.display = 'none');
-        savingsBadges.forEach(badge => badge.style.display = 'none');
+        
+        // Hide savings badge
+        if (savingsBadge) savingsBadge.classList.add('hidden');
       } else {
-        yearlyBtn.classList.add('active');
-        monthlyBtn.classList.remove('active');
+        // Update toggle switch
+        toggleSwitch.classList.remove('active');
+        isMonthly = false;
+        
+        // Update labels
+        if (monthlyLabel) monthlyLabel.classList.remove('active');
+        if (yearlyLabel) yearlyLabel.classList.add('active');
+        
+        // Update prices
         monthlyPrices.forEach(price => price.style.display = 'none');
         yearlyPrices.forEach(price => price.style.display = '');
-        savingsBadges.forEach(badge => badge.style.display = '');
+        
+        // Show savings badge
+        if (savingsBadge) savingsBadge.classList.remove('hidden');
       }
     }
+
+    // Set default to monthly
+    setPricingPeriod('monthly');
   }
 })();
 

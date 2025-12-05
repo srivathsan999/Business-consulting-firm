@@ -29,6 +29,47 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* Pricing section - Keep text on single line and align properly */
+        .section-title h2 {
+            white-space: nowrap;
+            text-align: center;
+        }
+        
+        .pricing-card h5 {
+            white-space: nowrap;
+            text-align: center;
+        }
+        
+        .pricing-card h2 {
+            white-space: nowrap;
+            text-align: center;
+        }
+        
+        .pricing-card .card-body {
+            text-align: center;
+        }
+        
+        .pricing-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 1.75rem;
+            }
+            
+            .pricing-card h5 {
+                font-size: 1.1rem;
+            }
+            
+            .pricing-card h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
 </head>
 <body>
     
@@ -256,7 +297,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div style="height: 250px; background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'); background-size: cover; background-position: center; border-radius: 0.5rem 0.5rem 0 0;"></div>
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h6>Dashboard Overview</h6>
                             <p class="text-muted small">Real-time analytics and insights</p>
                         </div>
@@ -265,7 +306,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div style="height: 250px; background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'); background-size: cover; background-position: center; border-radius: 0.5rem 0.5rem 0 0;"></div>
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h6>Data Management</h6>
                             <p class="text-muted small">Efficient data organization tools</p>
                         </div>
@@ -274,7 +315,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div style="height: 250px; background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop'); background-size: cover; background-position: center; border-radius: 0.5rem 0.5rem 0 0;"></div>
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h6>Team Collaboration</h6>
                             <p class="text-muted small">Built-in communication features</p>
                         </div>
@@ -289,10 +330,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <img src="../assets/images/favicon.svg" alt="ConsultPro" height="32" width="32">
-                        <h5 class="mb-0">ConsultPro</h5>
-                    </div>
+                    <h5 class="d-inline-flex align-items-center gap-2 mb-0" style="margin-bottom: var(--spacing-md) !important;">
+                        <img src="../assets/images/favicon.svg" alt="ConsultPro" height="24" width="24">
+                        ConsultPro
+                    </h5>
                     <p>Transforming businesses through expert consulting and strategic guidance.</p>
                     <div class="d-flex gap-3 mt-3">
                         <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -330,7 +371,7 @@
             </div>
             <hr class="my-4" style="border-color: var(--border-color);">
             <div class="row">
-                <div class="col-md-6"><p class="mb-0">&copy; 2024 ConsultPro. All rights reserved.</p></div>
+                <div class="col-md-6"><p class="mb-0">&copy; 2025 ConsultPro. All rights reserved.</p></div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-muted me-3">Privacy Policy</a>
                     <a href="#" class="text-muted">Terms of Service</a>
