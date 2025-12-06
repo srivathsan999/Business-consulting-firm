@@ -59,6 +59,30 @@
             max-width: 100%;
             margin: 0 auto;
         }
+        
+        /* Ensure logo is centered on desktop */
+        @media (min-width: 768px) {
+            .auth-header {
+                text-align: center !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+            
+            .auth-header .container {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin: 0 auto !important;
+            }
+            
+            .auth-logo {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin: 0 auto !important;
+            }
+        }
         .auth-logo {
             display: flex;
             align-items: center;
@@ -84,16 +108,25 @@
             transform: scale(1.05);
         }
         .auth-form-box {
-            margin-left: 10%;
+            margin-left: auto;
+            margin-right: auto;
         }
-        @media (min-width: 1200px) {
-            .auth-form-box {
-                margin-left: 12%;
-            }
+        
+        /* Ensure login box is centered on all screen sizes */
+        .row.justify-content-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+        
+        .login-card {
+            margin: 0 auto;
+        }
+        
         @media (max-width: 767px) {
             .auth-form-box {
-                margin-left: 0;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
         .login-container {
@@ -114,6 +147,176 @@
         }
         .login-header h2 {
             white-space: nowrap;
+        }
+        
+        /* Mobile view fixes */
+        @media (max-width: 768px) {
+            /* Ensure body and html don't overflow */
+            body, html {
+                width: 100% !important;
+                max-width: 100vw !important;
+                overflow-x: hidden !important;
+            }
+            
+            /* Fix container width and padding */
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            /* Remove left margin on mobile */
+            .auth-form-box {
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            
+            /* Ensure login card doesn't overflow */
+            .login-card {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+            }
+            
+            /* Fix card body padding on mobile */
+            .login-card .card-body {
+                padding: 1.5rem !important;
+            }
+            
+            /* Allow header text to wrap on mobile */
+            .login-header h2 {
+                white-space: normal !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Ensure form elements don't overflow */
+            .form-control,
+            .form-label,
+            .input-group {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            
+            /* Fix social buttons grid on mobile */
+            .social-login {
+                grid-template-columns: 1fr !important;
+                gap: 0.75rem !important;
+            }
+            
+            /* Ensure text doesn't overflow */
+            .form-check-label,
+            .text-muted,
+            p,
+            label,
+            a {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                max-width: 100%;
+            }
+            
+            /* Fix row and column spacing */
+            .row {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            
+            [class*="col-"] {
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+            
+            /* Ensure buttons don't overflow */
+            .btn {
+                width: 100% !important;
+                max-width: 100% !important;
+                white-space: normal !important;
+            }
+            
+            /* Fix input groups on mobile */
+            .input-group {
+                width: 100% !important;
+                max-width: 100% !important;
+                flex-wrap: nowrap !important;
+                position: relative !important;
+                display: flex !important;
+                align-items: stretch !important;
+            }
+            
+            .input-group .form-control {
+                max-width: 100% !important;
+                min-width: 0 !important;
+                flex: 1 1 auto !important;
+                padding-right: 3.5rem !important;
+            }
+            
+            /* Ensure login container doesn't cause overflow */
+            .login-container {
+                padding: 1rem 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            /* Fix auth header on mobile */
+            .auth-header {
+                padding: 1rem 0 !important;
+            }
+            
+            .auth-header .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            /* Ensure social buttons text wraps */
+            .social-btn span {
+                white-space: normal !important;
+                word-wrap: break-word;
+            }
+            
+            /* Fix remember me and forgot password alignment */
+            .d-flex.justify-content-between {
+                flex-wrap: wrap !important;
+                gap: 0.5rem;
+            }
+            
+            .d-flex.justify-content-between .form-check {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+            
+            .d-flex.justify-content-between a {
+                white-space: nowrap;
+            }
+            
+            /* Fix eye icon button alignment on mobile */
+            .input-group .btn-outline-secondary {
+                position: absolute !important;
+                right: 0.25rem !important;
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                height: auto !important;
+                width: auto !important;
+                min-width: auto !important;
+                padding: 0.5rem 0.75rem !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                z-index: 10 !important;
+                margin: 0 !important;
+                line-height: 1 !important;
+            }
+            
+            .input-group .btn-outline-secondary i {
+                font-size: 1.1rem !important;
+                line-height: 1 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
         }
         .divider {
             text-align: center;

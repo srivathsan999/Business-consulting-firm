@@ -55,10 +55,23 @@
             transform: translateY(-2px);
         }
         
-        /* Mission & Vision headings alignment */
+        /* Mission & Vision headings alignment - Center align only Our Mission and Our Vision */
         .section .row.g-5.align-items-start .col-lg-6 h2 {
             margin-top: 0;
             margin-bottom: 1rem;
+        }
+        
+        /* Center align only Our Mission and Our Vision headings */
+        /* Target h2 in the first section that has row.g-5.align-items-start (Mission & Vision section) */
+        section.section:first-of-type .row.g-5.align-items-start .col-lg-6:first-child h2,
+        section.section:first-of-type .row.g-5.align-items-start .col-lg-6:last-child h2 {
+            text-align: center !important;
+        }
+        
+        /* More specific: Target the section right after hero (Mission & Vision section) */
+        .hero + section.section .row.g-5.align-items-start .col-lg-6:first-child h2,
+        .hero + section.section .row.g-5.align-items-start .col-lg-6:last-child h2 {
+            text-align: center !important;
         }
         
         /* Our Journey section mobile alignment */

@@ -55,18 +55,121 @@
             text-align: center;
         }
         
+        /* Mobile view fixes - ensure proper centering and alignment */
+        @media (max-width: 768px) {
+            /* Ensure containers are centered and full width */
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            /* Center all sections */
+            .section,
+            .hero {
+                width: 100% !important;
+                text-align: center;
+            }
+            
+            /* Center hero content */
+            .hero .row {
+                text-align: center;
+            }
+            
+            .hero h1,
+            .hero .lead,
+            .hero p {
+                text-align: center !important;
+            }
+            
+            /* Center hero buttons */
+            .hero .d-flex {
+                justify-content: center !important;
+            }
+            
+            /* Center hero stats */
+            .hero .d-flex.gap-3 {
+                justify-content: center !important;
+                flex-wrap: wrap;
+            }
+            
+            /* Center all card content */
+            .card,
+            .card-body {
+                text-align: center !important;
+            }
+            
+            /* Center case study cards */
+            .card-body h5,
+            .card-body p {
+                text-align: center !important;
+            }
+            
+            /* Center pricing cards */
+            .pricing-card {
+                text-align: center !important;
+            }
+            
+            .pricing-card .list-unstyled {
+                text-align: center !important;
+                align-items: center !important;
+                margin: 0 auto !important;
+            }
+            
+            .pricing-card .list-unstyled li {
+                justify-content: center !important;
+                text-align: center !important;
+            }
+            
+            /* Center table on mobile */
+            .table-responsive {
+                width: 100%;
+                overflow-x: auto;
+            }
+            
+            /* Center section titles */
+            .section-title {
+                text-align: center !important;
+            }
+            
+            .section-title h2 {
+                text-align: center !important;
+            }
+            
+            .section-subtitle {
+                text-align: center !important;
+            }
+            
+            /* Ensure rows are centered */
+            .row {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            
+            /* Center columns */
+            [class*="col-"] {
+                text-align: center !important;
+            }
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 576px) {
             .section-title h2 {
                 font-size: 1.75rem;
+                white-space: normal !important;
             }
             
             .pricing-card h5 {
                 font-size: 1.1rem;
+                white-space: normal !important;
             }
             
             .pricing-card h2 {
                 font-size: 1.75rem;
+                white-space: normal !important;
             }
         }
     </style>

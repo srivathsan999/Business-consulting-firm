@@ -45,6 +45,107 @@
             font-size: 0.875rem;
             padding: 0.375rem 0.5rem;
         }
+        
+        /* Mobile view fixes for services page */
+        @media (max-width: 768px) {
+            /* Ensure container is centered and full width */
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            /* Center filter and view toggle section */
+            .row.mb-4 {
+                text-align: center;
+            }
+            
+            .row.mb-4 .col-md-6 {
+                text-align: center !important;
+                margin-bottom: 1rem;
+            }
+            
+            .row.mb-4 .col-md-6:last-child {
+                margin-bottom: 0;
+            }
+            
+            .row.mb-4 h5 {
+                text-align: center !important;
+                margin-bottom: 0.5rem;
+            }
+            
+            .row.mb-4 .d-flex {
+                justify-content: center !important;
+            }
+            
+            .row.mb-4 .text-md-end {
+                text-align: center !important;
+            }
+            
+            /* Fix grid view on mobile */
+            .services-container.grid-view {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            /* Fix list view on mobile - stack vertically */
+            .services-container.list-view {
+                display: block !important;
+            }
+            
+            .service-item.list-item {
+                flex-direction: column !important;
+                width: 100% !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .service-item.list-item .card-body {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 1rem !important;
+                padding: 1.5rem !important;
+            }
+            
+            .service-item.list-item .service-icon {
+                margin: 0 auto !important;
+            }
+            
+            /* Center all service card content on mobile */
+            .service-item .card-body {
+                text-align: center !important;
+            }
+            
+            .service-item .card-title {
+                text-align: center !important;
+            }
+            
+            .service-item .card-text {
+                text-align: center !important;
+            }
+            
+            /* Center service lists */
+            .service-item .list-unstyled {
+                text-align: center !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+            
+            .service-item .list-unstyled li {
+                text-align: center !important;
+                justify-content: center !important;
+            }
+            
+            /* Ensure cards are full width on mobile */
+            .service-item.card {
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
     </style>
 </head>
 <body>
