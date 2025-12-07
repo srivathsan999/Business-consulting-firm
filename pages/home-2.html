@@ -55,6 +55,46 @@
             text-align: center;
         }
         
+        /* Tablet view - Keep button text on single line and reduce button sizes */
+        @media (min-width: 768px) and (max-width: 991px) {
+            /* Hero section buttons */
+            .hero .btn,
+            .hero .btn-lg,
+            .hero .btn-primary,
+            .hero .btn-outline {
+                white-space: nowrap !important;
+                padding: 0.5rem 1rem !important;
+                font-size: 0.85rem !important;
+                min-width: auto !important;
+            }
+            
+            /* Pricing card buttons */
+            .pricing-card .btn,
+            .pricing-card .btn-primary {
+                white-space: nowrap !important;
+                padding: 0.5rem 1rem !important;
+                font-size: 0.85rem !important;
+            }
+            
+            /* All buttons in sections */
+            .section .btn,
+            .section .btn-primary,
+            .section .btn-outline {
+                white-space: nowrap !important;
+                padding: 0.5rem 1rem !important;
+                font-size: 0.85rem !important;
+            }
+            
+            /* Center social icons in footer on tablet view */
+            .footer .d-flex.gap-3 {
+                justify-content: center !important;
+            }
+            
+            .footer .col-md-6.col-lg-3:first-child {
+                text-align: center !important;
+            }
+        }
+        
         /* Mobile view fixes - ensure proper centering and alignment */
         @media (max-width: 768px) {
             /* Ensure containers are centered and full width */

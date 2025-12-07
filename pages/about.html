@@ -169,6 +169,133 @@
         [data-theme="light"] .col-lg-6 .bg-secondary .text-muted {
             color: #6c757d !important;
         }
+        
+        /* Make all text under headings the same size */
+        /* Override lead class to match regular paragraph size */
+        .section .lead,
+        .hero .lead,
+        .col-lg-6 .lead {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Override small class to match regular paragraph size */
+        .section .small,
+        .section p.small,
+        .card-body .small,
+        .card-body p.small,
+        .text-muted.small,
+        p.small {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Ensure all regular paragraphs are consistent */
+        .section p,
+        .col-lg-6 p,
+        .card-body p:not(.small):not(.lead) {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Make list items same size */
+        .section ul li,
+        .col-lg-6 ul li {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Make core values text same size */
+        .bg-secondary p.small,
+        .bg-secondary .small {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Make team member descriptions same size */
+        .team-member-card p.small,
+        .team-member-card .small {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Make testimonial text same size */
+        .card-body p:not(.small):not(.lead) {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Tablet view - Keep author names on single line, bottom aligned, no ellipsis */
+        @media (min-width: 768px) and (max-width: 991px) {
+            /* Testimonials card container */
+            .bg-secondary .card {
+                overflow: visible !important;
+            }
+            
+            /* Testimonials card body */
+            .bg-secondary .card-body {
+                padding: 1.25rem !important;
+                overflow: visible !important;
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            
+            /* Testimonials author section container - align to bottom */
+            .card-body .d-flex.align-items-center {
+                flex-wrap: nowrap !important;
+                align-items: flex-end !important;
+                width: 100% !important;
+                overflow: visible !important;
+                margin-top: auto !important;
+            }
+            
+            /* Author image - fixed size, no shrink, align to bottom */
+            .card-body .d-flex.align-items-center img {
+                flex-shrink: 0 !important;
+                width: 50px !important;
+                height: 50px !important;
+                margin-right: 0.75rem !important;
+                align-self: flex-end !important;
+            }
+            
+            /* Author info container - proper flex settings, align to bottom */
+            .card-body .d-flex.align-items-center > div {
+                flex: 1 1 0% !important;
+                min-width: 0 !important;
+                overflow: visible !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-end !important;
+            }
+            
+            /* Author name - keep on single line, no ellipsis */
+            .card-body .d-flex.align-items-center strong {
+                white-space: nowrap !important;
+                display: block !important;
+                font-size: 0.95rem !important;
+                line-height: 1.3 !important;
+                margin-bottom: 0.15rem !important;
+                overflow: visible !important;
+                text-overflow: clip !important;
+                width: auto !important;
+            }
+            
+            /* Author title - allow 2 lines to prevent overflow, no word splitting */
+            .card-body .d-flex.align-items-center .small.text-muted {
+                white-space: normal !important;
+                overflow: visible !important;
+                text-overflow: clip !important;
+                font-size: 0.8rem !important;
+                line-height: 1.3 !important;
+                margin-bottom: 0 !important;
+                display: block !important;
+                width: 100% !important;
+                max-height: 2.6em !important; /* Allow 2 lines (1.3em line-height * 2) */
+                word-wrap: normal !important;
+                overflow-wrap: normal !important;
+                word-break: normal !important;
+            }
+        }
     </style>
 </head>
 <body>

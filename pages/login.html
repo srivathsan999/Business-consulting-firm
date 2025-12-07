@@ -121,7 +121,7 @@
         
         .login-card {
             margin: 0 auto;
-        }
+            }
         
         @media (max-width: 767px) {
             .auth-form-box {
@@ -411,6 +411,43 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        
+        /* Tablet view - Center login box */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .login-container {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                min-height: calc(100vh - 150px) !important;
+            }
+            
+            .login-container .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto !important;
+            }
+            
+            .login-container .row.justify-content-center {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                margin: 0 !important;
+            }
+            
+            .auth-form-box {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                width: 100% !important;
+                max-width: 500px !important;
+            }
+            
+            .login-card {
+                margin: 0 auto !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
         }
     </style>
 </head>
