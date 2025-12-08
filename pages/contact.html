@@ -195,27 +195,236 @@
             font-size: 0.85rem !important;
         }
         
-        /* Reorder sections on tablet and mobile - Send Us Message above Get In Touch */
+        /* Reorder sections on tablet and mobile - Send Us Message as hero */
         @media (max-width: 991px) {
-            /* Ensure row uses flexbox for ordering */
-            .section.bg-secondary .row.g-5 {
+            /* Make body a flex container to enable reordering */
+            body {
                 display: flex !important;
                 flex-direction: column !important;
             }
             
-            /* Contact Form - Send Us Message - appears first */
-            .section.bg-secondary .row.g-5 .col-lg-6:first-child {
-                order: 1 !important;
+            /* Ensure all direct children maintain block behavior */
+            body > * {
+                width: 100% !important;
+                flex-shrink: 0 !important;
             }
             
-            /* Map Section - Get In Touch - appears second */
-            .section.bg-secondary .row.g-5 .col-lg-6:last-child {
+            /* Navbar - stays at top */
+            nav {
+                order: 0 !important;
+            }
+            
+            /* Hide original hero section on tablet and mobile */
+            .hero.bg-secondary {
+                display: none !important;
+            }
+            
+            /* Contact Form and Map section - appears first as hero replacement */
+            section.section.bg-secondary {
+                order: 1 !important;
+                padding: 4rem 0 !important;
+                background: var(--bg-secondary) !important;
+            }
+            
+            /* Style the form section to look like a hero section */
+            section.section.bg-secondary .col-lg-6:first-child {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-bottom: 0 !important;
+            }
+            
+            /* Make the form card look like hero content */
+            section.section.bg-secondary .col-lg-6:first-child .card {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                height: auto !important;
+                width: 100% !important;
+            }
+            
+            section.section.bg-secondary .col-lg-6:first-child .card-body {
+                padding: 0 !important;
+                text-align: center !important;
+                width: 100% !important;
+                position: relative;
+            }
+            
+            /* Style the heading to look like hero heading */
+            section.section.bg-secondary .col-lg-6:first-child h2 {
+                font-size: 2.5rem !important;
+                font-weight: 700 !important;
+                margin-bottom: 1rem !important;
+                text-align: center !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Style form to look better in hero format - centered */
+            section.section.bg-secondary .col-lg-6:first-child .card-body form {
+                max-width: 600px !important;
+                margin: 0 auto !important;
+                text-align: left !important;
+                width: 100% !important;
+            }
+            
+            /* Add "Get In Touch" heading at the end of hero section (after form) */
+            section.section.bg-secondary .col-lg-6:first-child .card-body form::after {
+                content: "Get In Touch";
+                display: block;
+                text-align: center;
+                margin-top: 3rem;
+                padding-top: 3rem;
+                border-top: 1px solid var(--border-color);
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                line-height: 1.3;
+                width: 100%;
+            }
+            
+            /* Add description below heading with smaller text size */
+            section.section.bg-secondary .col-lg-6:first-child .card-body::after {
+                content: "We'd love to hear from you. Send us a message and we'll respond as soon as possible.";
+                display: block;
+                text-align: center;
+                margin-top: 1rem;
+                padding: 0 1rem;
+                font-size: 1.25rem;
+                font-weight: 400;
+                color: var(--text-secondary);
+                line-height: 1.6;
+                width: 100%;
+            }
+            
+            /* Center the form column container */
+            section.section.bg-secondary .col-lg-6:first-child {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+            
+            /* Contact Information Cards section - appears second */
+            .hero + section.section:not(.bg-secondary) {
                 order: 2 !important;
+            }
+            
+            /* Map section - appears third after contact cards */
+            section.section.bg-secondary .col-lg-6:last-child {
+                order: 3 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-top: 2rem !important;
+            }
+            
+            /* Additional Information section - appears fourth */
+            section.section.bg-secondary + section.section:not(.bg-secondary) {
+                order: 4 !important;
+            }
+            
+            /* Footer - stays at the end */
+            footer {
+                order: 999 !important;
+            }
+            
+            /* Within the Contact Form and Map section, ensure row uses flexbox */
+            .section.bg-secondary .row.g-5,
+            .section.bg-secondary .row {
+                display: flex !important;
+                flex-direction: column !important;
             }
         }
         
         /* Mobile view - Fix "Send us a Message" text cutting */
         @media (max-width: 767px) {
+            /* Ensure body flexbox ordering is maintained on mobile */
+            body {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            
+            body > * {
+                width: 100% !important;
+                flex-shrink: 0 !important;
+            }
+            
+            /* Hide original hero section on mobile */
+            .hero.bg-secondary {
+                display: none !important;
+            }
+            
+            /* Maintain section ordering on mobile */
+            nav { order: 0 !important; }
+            section.section.bg-secondary { 
+                order: 1 !important;
+                padding: 3rem 0 !important;
+            }
+            .hero + section.section:not(.bg-secondary) { order: 2 !important; }
+            section.section.bg-secondary .col-lg-6:last-child { order: 3 !important; }
+            section.section.bg-secondary + section.section:not(.bg-secondary) { order: 4 !important; }
+            footer { order: 999 !important; }
+            
+            /* Style heading for mobile hero format */
+            section.section.bg-secondary .col-lg-6:first-child h2 {
+                font-size: 2rem !important;
+                font-weight: 700 !important;
+                margin-bottom: 1.5rem !important;
+                text-align: center !important;
+                color: var(--text-primary) !important;
+            }
+            
+            /* Style form container for mobile */
+            section.section.bg-secondary .col-lg-6:first-child .card-body form {
+                max-width: 100% !important;
+                margin: 0 auto !important;
+            }
+            
+            /* Add "Get In Touch" heading at the end of hero section (after form) on mobile */
+            section.section.bg-secondary .col-lg-6:first-child .card-body form::after {
+                content: "Get In Touch";
+                display: block;
+                text-align: center;
+                margin-top: 3rem;
+                padding-top: 3rem;
+                border-top: 1px solid var(--border-color);
+                font-size: 1.75rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                line-height: 1.3;
+                width: 100%;
+            }
+            
+            /* Add description below heading with smaller text size on mobile */
+            section.section.bg-secondary .col-lg-6:first-child .card-body::after {
+                content: "We'd love to hear from you. Send us a message and we'll respond as soon as possible.";
+                display: block;
+                text-align: center;
+                margin-top: 1rem;
+                padding: 0 1rem;
+                font-size: 1.1rem;
+                font-weight: 400;
+                color: var(--text-secondary);
+                line-height: 1.6;
+                width: 100%;
+            }
+            
+            /* Ensure ordering is maintained within the form section */
+            .section.bg-secondary .row.g-5,
+            .section.bg-secondary .row {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            
+            .section.bg-secondary .col-lg-6:first-child {
+                order: 1 !important;
+                width: 100% !important;
+                margin-bottom: 0 !important;
+            }
+            
+            .section.bg-secondary .col-lg-6:last-child {
+                order: 2 !important;
+                width: 100% !important;
+                margin-top: 2rem !important;
+            }
+            
             /* Prevent text from being cut, allow proper wrapping */
             .card-body h2 {
                 white-space: normal !important;

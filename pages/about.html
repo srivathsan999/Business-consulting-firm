@@ -174,9 +174,12 @@
         /* Override lead class to match regular paragraph size */
         .section .lead,
         .hero .lead,
-        .col-lg-6 .lead {
+        .col-lg-6 .lead,
+        .section-title .lead,
+        p.lead {
             font-size: 1rem !important;
             line-height: 1.6 !important;
+            font-weight: 400 !important;
         }
         
         /* Override small class to match regular paragraph size */
@@ -185,42 +188,60 @@
         .card-body .small,
         .card-body p.small,
         .text-muted.small,
-        p.small {
+        p.small,
+        .small,
+        .team-member-card .small,
+        .team-member-card p.small,
+        .bg-secondary p.small,
+        .bg-secondary .small,
+        .card .small,
+        .card p.small {
             font-size: 1rem !important;
             line-height: 1.6 !important;
+            font-weight: 400 !important;
         }
         
         /* Ensure all regular paragraphs are consistent */
         .section p,
         .col-lg-6 p,
-        .card-body p:not(.small):not(.lead) {
+        .card-body p,
+        .card p,
+        .timeline p,
+        .section-title p,
+        p:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
             font-size: 1rem !important;
             line-height: 1.6 !important;
         }
         
         /* Make list items same size */
         .section ul li,
-        .col-lg-6 ul li {
+        .col-lg-6 ul li,
+        ul li {
             font-size: 1rem !important;
             line-height: 1.6 !important;
         }
         
-        /* Make core values text same size */
-        .bg-secondary p.small,
-        .bg-secondary .small {
+        /* Override section-subtitle to match regular paragraph size */
+        .section-subtitle,
+        .section-title .section-subtitle,
+        p.section-subtitle {
             font-size: 1rem !important;
             line-height: 1.6 !important;
-        }
-        
-        /* Make team member descriptions same size */
-        .team-member-card p.small,
-        .team-member-card .small {
-            font-size: 1rem !important;
-            line-height: 1.6 !important;
+            font-weight: 400 !important;
         }
         
         /* Make testimonial text same size */
-        .card-body p:not(.small):not(.lead) {
+        .card-body p,
+        .card p {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Ensure text-muted maintains same size but different color */
+        .text-muted,
+        p.text-muted,
+        .text-muted.small,
+        p.text-muted.small {
             font-size: 1rem !important;
             line-height: 1.6 !important;
         }

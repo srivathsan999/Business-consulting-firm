@@ -111,11 +111,81 @@
             align-items: center;
             justify-content: center;
             padding: 2rem 0;
+            width: 100%;
+        }
+        
+        .register-container .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .register-card {
             max-width: 550px;
             width: 100%;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        
+        /* Tablet view - ensure proper centering */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .register-container {
+                min-height: calc(100vh - 150px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 3rem 0;
+            }
+            
+            .register-container .container {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            
+            .row.justify-content-center {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            
+            .col-md-8.col-lg-7.auth-form-box {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                max-width: 550px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                flex: 0 0 auto !important;
+            }
+            
+            .auth-form-box {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                max-width: 550px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            .register-card {
+                max-width: 550px !important;
+                width: 100% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
         }
         .register-header {
             text-align: center;
